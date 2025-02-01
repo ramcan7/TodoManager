@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Data.AppDbContext;
+using TodoManager.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

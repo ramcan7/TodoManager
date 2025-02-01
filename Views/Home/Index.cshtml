@@ -1,8 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<TodoManager.Models.Todo>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Todo in Model)
+        {
+            <tr>
+                <td>@Todo.TodoTitle</td>
+                <td>@Todo.TodoDescription</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@Todo.TodoId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@Todo.TodoId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@Todo.TodoId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

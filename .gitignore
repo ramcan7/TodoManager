@@ -6,3 +6,6 @@ appsettings.*.json
 # Ignore build output directories
 bin/
 obj/
+
+.DS_Store/
+.DS_Store
