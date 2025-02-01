@@ -1,3 +1,8 @@
 #for security reasons
 appsettings.json
+appsettings.*.json
 .vscode/settings.json
+
+# Ignore build output directories
+bin/
+obj/
